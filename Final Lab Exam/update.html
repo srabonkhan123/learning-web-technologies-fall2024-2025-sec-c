@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Update Employee</h2>
+    <form id="updateForm" action="update.php" method="POST" onsubmit="return validateForm()">
+        <input type="hidden" name="id" id="employeeId">
+        
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" required>
+        
+        <label for="contact_no">Contact Number:</label>
+        <input type="text" name="contact_no" id="contact_no" placeholder="Enter Contact Number" required>
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Enter Username" required>
+        
+        <button type="submit">Update</button>
+    </form>
+    <script src="validation.js"></script>
+</body>
+</html>
